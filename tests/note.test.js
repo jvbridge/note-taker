@@ -4,13 +4,13 @@ describe ("note", () => {
     it("should make sure that titles are strings", () => {
         const title = 0x242;
         const body = "Life before death, strength before weakness, journey before destination";
-        expect(() => {new Note(title, body);}).toThrow();
+        expect(() => {new Note(title, body);}).toThrow(TypeError);
     });
 
     it("should make sure that bodies are strings", () => {
         const title = "Life before death, strength before weakness, journey before destination";
         const body = 0x242;
-        expect(() => {new Note(title, body);}).toThrow();
+        expect(() => {new Note(title, body);}).toThrow(TypeError);
     });
 
     it("Should return the strings given", () => {
@@ -27,7 +27,7 @@ describe ("note", () => {
         const body = "Life before death, strength before weakness, journey before destination";
         const oath = new Note(title, body);
 
-        expect(() => {oath.setTitle(null);}).toThrow();
-        expect(() => {oath.setBody(null);}).toThrow();
+        expect(() => {oath.setTitle(null);}).toThrow(TypeError);
+        expect(() => {oath.setBody(null);}).toThrow(TypeError);
     });
 });
