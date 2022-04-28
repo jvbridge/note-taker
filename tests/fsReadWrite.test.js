@@ -46,7 +46,7 @@ describe ("Read and Write", () => {
         expect(fileArr).toEqual(beatles);
     });  
     
-    it ("should append a new value to the database", () => {
+    it ("should append a new value to the database", async () => {
         const beatles = [
             new Note("Paul", "He lived and let die"),
             new Note("John", "Quite the dreamer, he imagined"),
@@ -59,7 +59,7 @@ describe ("Read and Write", () => {
         const note = new Note("Pete", "He didn't have the best of timing");
         beatles.push(note);
         const retStr = JSON.stringify(beatles);
-        appendDb(note);
+        await appendDb(note);
         expect(fs.writeFile).lastCalledWith(
             PATH_TO_DB, // path
             retStr, // the notes
