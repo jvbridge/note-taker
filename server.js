@@ -15,6 +15,13 @@ app.use(clog);
 app.use(express.static('public'));
 
 
+// getter for the notes page
+app.get('/notes', (req, res) =>{
+  const currPath = path.join(__dirname, "/public/notes.html");
+    console.info("get request for notes, sending them file at: ", currPath);
+    res.sendFile(path.join(__dirname, "/public/notes.html"));
+});
+
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
 );
