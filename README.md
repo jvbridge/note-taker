@@ -45,7 +45,7 @@ You can also click the `+` button to clear that area.
 Once you type a note a save icon will appear 
 
 <div style='max-height:450px; max-width:740px;overflow:hidden'>
-    <img src='./assets/note_in_progress.png'>
+    <img src='./assets/note_progress.png'>
 </div>
 
 Clicking the floppy disk will allow you to write the file to the database. 
