@@ -1,6 +1,7 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "Starter note",
+        "text": "This is the starter note. Notes are held as a JSON file on the server-side. \n\nThis means that after 30 minutes of inactivity Heroku will reset the server and your notes will stop persisting.\n\nAdditionally, these notes are able to be edited by anyone. \n\nThe purpose of this is both learning (I had to create the routes for the API) and fun, rather than to be a serious tool for someone to use. ",
+        "id": "6eaf7977-f020-4004-bd9d-2a58ea9e7660"
     }
 ]

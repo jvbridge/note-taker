@@ -1,6 +1,7 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-// TODO: middleware routes go here
+const notesRouter = require("./notes");
+app.use("/notes", notesRouter);
 
 module.exports = app;
